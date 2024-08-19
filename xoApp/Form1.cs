@@ -33,6 +33,7 @@ namespace xoApp
             currentPlayer = Player.X;
             turn++;
             labelTrun.Text = $"turn {turn}";
+            btnReset.Tag = "reset";
         }
 
         private void buttonClick(object sender)
@@ -147,7 +148,7 @@ namespace xoApp
         {
             foreach (Control x in this.Controls)
             {
-                if (x is Button)
+                if (x is Button && x.Tag != "reset")
                 {
                     ((Button)x).Enabled = false;
 
