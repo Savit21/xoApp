@@ -38,14 +38,14 @@ namespace xoApp
             var button = (Button)sender;
             if(currentPlayer == Player.X)
             {
-                currentPlayer = Player.X;
+                currentPlayer = Player.O;
                 button.Text = currentPlayer.ToString();
                 button.Enabled = false;
                 button.BackColor = Color.LightGreen;
             }
             else
             {
-                currentPlayer = Player.O;
+                currentPlayer = Player.X;
                 button.Text = currentPlayer.ToString();
                 button.Enabled = false;
                 button.BackColor = Color.LightSalmon;
