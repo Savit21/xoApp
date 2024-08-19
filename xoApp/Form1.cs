@@ -12,9 +12,19 @@ namespace xoApp
 {
     public partial class Form1 : Form
     {
+        Player currentPlayer;
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        public enum Player
+        {
+            X,
+            O
+        }
+
+
     }
 }

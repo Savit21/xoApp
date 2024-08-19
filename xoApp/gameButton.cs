@@ -8,6 +8,6 @@ namespace xoApp
 {
     public class gameButton
     {
-
+        public string player { get; set; }
     }
 }
