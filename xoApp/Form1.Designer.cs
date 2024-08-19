@@ -40,7 +40,6 @@ namespace xoApp
             this.button9 = new System.Windows.Forms.Button();
             this.labelTrun = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -140,22 +139,11 @@ namespace xoApp
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 10;
             // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(447, 420);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(119, 38);
-            this.btnReset.TabIndex = 11;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 477);
-            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTrun);
             this.Controls.Add(this.button7);
@@ -188,7 +176,6 @@ namespace xoApp
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label labelTrun;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnReset;
     }
 }
 

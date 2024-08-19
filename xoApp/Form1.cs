@@ -13,7 +13,7 @@ namespace xoApp
     public partial class Form1 : Form
     {
         Player currentPlayer;
-        Player Winner;
+        Player winner;
 
         int turn = 0;
 
@@ -118,9 +118,9 @@ namespace xoApp
             button3.Text == "X" && button5.Text == "X" && button7.Text == "X"
                 )
             {
-                Winner = Player.X;
-                WON();
+                winner = Player.X;
                 label1.Text = "X Wins";
+                WON();
             }
             else if (
             button1.Text == "O" && button2.Text == "O" && button3.Text == "O" ||
@@ -133,10 +133,11 @@ namespace xoApp
             button3.Text == "O" && button5.Text == "O" && button7.Text == "O"
                 )
             {
-                Winner = Player.O;
-                WON();
+                winner = Player.O;
                 label1.Text = "O Wins";
-            }else if(turn >= 10)
+                WON();
+            }
+            else if(turn >= 10)
             {
                 label1.Text = "Draw";
             }
@@ -148,39 +149,18 @@ namespace xoApp
             {
                 if (x is Button)
                 {
-                    if (x.Text != "Reset")
+                    ((Button)x).Enabled = false;
+
+                    if (x.Text == winner.ToString())
                     {
-                        ((Button)x).Enabled = false;
-
-                        if (x.Text == Winner.ToString())
-                        {
-                            ((Button)x).BackColor = Color.Red;
-                        }
-                        else
-                        {
-                            ((Button)x).BackColor = default(Color);
-                        }
+                        ((Button)x).BackColor = Color.Red;
                     }
+                    else
+                    {
+                        ((Button)x).BackColor = default(Color);
+                    }         
                 }
             }
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            foreach (Control x in this.Controls)
-            {
-                if (x is Button)
-                {
-                    ((Button)x).Enabled = true;
-                    ((Button)x).Text = "";
-                    ((Button)x).BackColor = Color.FromName("Control");
-                }
-            }
-
-            currentPlayer = Player.X;
-            turn = 1;
-            labelTrun.Text = $"turn {turn}";
-            label1.Text = "";
         }
     }
 }
