@@ -148,19 +148,39 @@ namespace xoApp
             {
                 if (x is Button)
                 {
-                    ((Button)x).Enabled = false;
-
-                    if (x.Text == Winner.ToString())
+                    if (x.Text != "Reset")
                     {
-                        ((Button)x).BackColor = Color.Red;
-                    }
-                    else
-                    {
+                        ((Button)x).Enabled = false;
 
-                        ((Button)x).BackColor = default(Color);
+                        if (x.Text == Winner.ToString())
+                        {
+                            ((Button)x).BackColor = Color.Red;
+                        }
+                        else
+                        {
+                            ((Button)x).BackColor = default(Color);
+                        }
                     }
                 }
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            foreach (Control x in this.Controls)
+            {
+                if (x is Button)
+                {
+                    ((Button)x).Enabled = true;
+                    ((Button)x).Text = "";
+                    ((Button)x).BackColor = Color.FromName("Control");
+                }
+            }
+
+            currentPlayer = Player.X;
+            turn = 1;
+            labelTrun.Text = $"turn {turn}";
+            label1.Text = "";
         }
     }
 }
