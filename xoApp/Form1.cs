@@ -31,27 +31,29 @@ namespace xoApp
         {
             currentPlayer = Player.X;
             turn++;
+            labelTrun.Text = $"turn {turn}";
         }
 
         private void buttonClick(object sender)
         {
             var button = (Button)sender;
             if(currentPlayer == Player.X)
-            {
-                currentPlayer = Player.O;
+            {                
                 button.Text = currentPlayer.ToString();
                 button.Enabled = false;
                 button.BackColor = Color.LightGreen;
+                currentPlayer = Player.O;
             }
             else
             {
-                currentPlayer = Player.X;
                 button.Text = currentPlayer.ToString();
                 button.Enabled = false;
                 button.BackColor = Color.LightSalmon;
+                currentPlayer = Player.X;
             }
 
             turn++;
+            labelTrun.Text = $"turn {turn}";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,5 +100,39 @@ namespace xoApp
         {
             buttonClick(sender);
         }
+
+        private void CheckWinner()
+        {
+            if (
+            button1.Text == "X" && button2.Text == "X" && button3.Text == "X" ||
+            button4.Text == "X" && button5.Text == "X" && button6.Text == "X" ||
+            button7.Text == "X" && button8.Text == "X" && button9.Text == "X" ||
+            button1.Text == "X" && button4.Text == "X" && button7.Text == "X" ||
+            button2.Text == "X" && button5.Text == "X" && button8.Text == "X" ||
+            button3.Text == "X" && button6.Text == "X" && button9.Text == "X" ||
+            button1.Text == "X" && button5.Text == "X" && button9.Text == "X" ||
+            button3.Text == "X" && button5.Text == "X" && button7.Text == "X"
+                )
+            {
+                WON();
+                label1.Text = "X Wins";
+            }
+            else if (
+            button1.Text == "O" && button2.Text == "O" && button3.Text == "O" ||
+            button4.Text == "O" && button5.Text == "O" && button6.Text == "O" ||
+            button7.Text == "O" && button8.Text == "O" && button9.Text == "O" ||
+            button1.Text == "O" && button4.Text == "O" && button7.Text == "O" ||
+            button2.Text == "O" && button5.Text == "O" && button8.Text == "O" ||
+            button3.Text == "O" && button6.Text == "O" && button9.Text == "O" ||
+            button1.Text == "O" && button5.Text == "O" && button9.Text == "O" ||
+            button3.Text == "O" && button5.Text == "O" && button7.Text == "O"
+                )
+            {
+                WON();
+                label1.Text = "O Wins";
+            }
+        }
+
+
     }
 }
