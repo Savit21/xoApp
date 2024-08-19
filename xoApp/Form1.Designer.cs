@@ -39,6 +39,7 @@ namespace xoApp
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.labelTrun = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -130,11 +131,20 @@ namespace xoApp
             this.labelTrun.Size = new System.Drawing.Size(0, 13);
             this.labelTrun.TabIndex = 9;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(444, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 477);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTrun);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -165,6 +175,7 @@ namespace xoApp
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label labelTrun;
+        private System.Windows.Forms.Label label1;
     }
 }
 

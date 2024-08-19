@@ -42,6 +42,7 @@ namespace xoApp
                 button.Text = currentPlayer.ToString();
                 button.Enabled = false;
                 button.BackColor = Color.LightGreen;
+                button.Tag = "play";
                 currentPlayer = Player.O;
             }
             else
@@ -49,11 +50,13 @@ namespace xoApp
                 button.Text = currentPlayer.ToString();
                 button.Enabled = false;
                 button.BackColor = Color.LightSalmon;
+                button.Tag = "play";
                 currentPlayer = Player.X;
             }
 
             turn++;
             labelTrun.Text = $"turn {turn}";
+            CheckWinner();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -133,6 +136,16 @@ namespace xoApp
             }
         }
 
-
+        private void WON()
+        {
+            foreach (Control x in this.Controls)
+            {
+                if (x is Button && x.Tag == "play")
+                {
+                    ((Button)x).Enabled = false;
+                    ((Button)x).BackColor = default(Color);
+                }
+            }
+        }
     }
 }
