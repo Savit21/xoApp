@@ -117,7 +117,6 @@ namespace xoApp
             button3.Text == "X" && button5.Text == "X" && button7.Text == "X"
                 )
             {
-                WON();
                 label1.Text = "X Wins";
             }
             else if (
@@ -131,21 +130,23 @@ namespace xoApp
             button3.Text == "O" && button5.Text == "O" && button7.Text == "O"
                 )
             {
-                WON();
                 label1.Text = "O Wins";
+            }else if(turn >= 10)
+            {
+                label1.Text = "Draw";
             }
         }
 
-        private void WON()
-        {
-            foreach (Control x in this.Controls)
-            {
-                if (x is Button && x.Tag == "play")
-                {
-                    ((Button)x).Enabled = false;
-                    ((Button)x).BackColor = default(Color);
-                }
-            }
-        }
+        //private void WON()
+        //{
+        //    foreach (Control x in this.Controls)
+        //    {
+        //        if (x is Button && x.Tag == "play")
+        //        {
+        //            ((Button)x).Enabled = false;
+        //            ((Button)x).BackColor = default(Color);
+        //        }
+        //    }
+        //}
     }
 }
