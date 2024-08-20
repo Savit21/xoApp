@@ -31,6 +31,7 @@ namespace xoApp
         private void Form1_Load(object sender, EventArgs e)
         {
             currentPlayer = Player.X;
+            lbWhoTrun.Text = $"{currentPlayer} Trun";
             turn++;
             labelTrun.Text = $"turn {turn}";
             btnReset.Tag = "reset";
@@ -58,6 +59,7 @@ namespace xoApp
 
             turn++;
             labelTrun.Text = $"turn {turn}";
+            lbWhoTrun.Text = $"{currentPlayer} Trun";
             CheckWinner();
         }
 
@@ -120,7 +122,7 @@ namespace xoApp
                 )
             {
                 winner = Player.X;
-                label1.Text = "X Wins";
+                lbWhoTrun.Text = "X Win";
                 WON();
             }
             else if (
@@ -135,12 +137,12 @@ namespace xoApp
                 )
             {
                 winner = Player.O;
-                label1.Text = "O Wins";
+                lbWhoTrun.Text = "O Win";
                 WON();
             }
             else if(turn >= 10)
             {
-                label1.Text = "Draw";
+                lbWhoTrun.Text = "Draw";
             }
         }
 
@@ -152,11 +154,7 @@ namespace xoApp
                 {
                     ((Button)x).Enabled = false;
 
-                    if (x.Text == winner.ToString())
-                    {
-                        ((Button)x).BackColor = Color.Red;
-                    }
-                    else
+                    if (x.Text != winner.ToString())
                     {
                         ((Button)x).BackColor = default(Color);
                     }         
@@ -166,7 +164,20 @@ namespace xoApp
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            turn = 1;
+            labelTrun.Text = $"turn {turn}";
+            currentPlayer = Player.X;
+            lbWhoTrun.Text = $"{currentPlayer} Trun";
 
+            foreach (Control x in this.Controls)
+            {
+                if (x is Button && x.Tag != "reset")
+                {
+                    ((Button)x).Enabled = true;
+                    ((Button)x).Text = "";
+                    ((Button)x).BackColor = Color.White;
+                }
+            }
         }
     }
 }

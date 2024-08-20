@@ -39,7 +39,6 @@ namespace xoApp
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.labelTrun = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.lbWhoTrun = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -137,22 +136,15 @@ namespace xoApp
             // labelTrun
             // 
             this.labelTrun.AutoSize = true;
-            this.labelTrun.Location = new System.Drawing.Point(444, 51);
+            this.labelTrun.Location = new System.Drawing.Point(442, 20);
             this.labelTrun.Name = "labelTrun";
-            this.labelTrun.Size = new System.Drawing.Size(0, 13);
+            this.labelTrun.Size = new System.Drawing.Size(10, 13);
             this.labelTrun.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(444, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 10;
+            this.labelTrun.Text = "-";
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(466, 424);
+            this.btnReset.Location = new System.Drawing.Point(445, 424);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(92, 34);
             this.btnReset.TabIndex = 11;
@@ -173,10 +165,9 @@ namespace xoApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 477);
+            this.ClientSize = new System.Drawing.Size(550, 477);
             this.Controls.Add(this.lbWhoTrun);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTrun);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -207,7 +198,6 @@ namespace xoApp
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label labelTrun;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label lbWhoTrun;
     }
