@@ -148,7 +148,7 @@ namespace xoApp
         {
             foreach (Control x in this.Controls)
             {
-                if (x is Button && x.Tag.ToString() != "reset")
+                if (x is Button && x.Tag != "reset")
                 {
                     ((Button)x).Enabled = false;
 
@@ -162,6 +162,11 @@ namespace xoApp
                     }         
                 }
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
