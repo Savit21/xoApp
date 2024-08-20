@@ -136,7 +136,7 @@ namespace xoApp
             // labelTrun
             // 
             this.labelTrun.AutoSize = true;
-            this.labelTrun.Location = new System.Drawing.Point(442, 20);
+            this.labelTrun.Location = new System.Drawing.Point(156, 20);
             this.labelTrun.Name = "labelTrun";
             this.labelTrun.Size = new System.Drawing.Size(10, 13);
             this.labelTrun.TabIndex = 9;
@@ -144,9 +144,9 @@ namespace xoApp
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(445, 424);
+            this.btnReset.Location = new System.Drawing.Point(441, 424);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(92, 34);
+            this.btnReset.Size = new System.Drawing.Size(82, 34);
             this.btnReset.TabIndex = 11;
             this.btnReset.Text = "reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@ namespace xoApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 477);
+            this.ClientSize = new System.Drawing.Size(535, 471);
             this.Controls.Add(this.lbWhoTrun);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.labelTrun);
