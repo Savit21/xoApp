@@ -31,6 +31,7 @@ namespace xoApp
         private void Form1_Load(object sender, EventArgs e)
         {
             currentPlayer = Player.X;
+            lbWhoTrun.Text = $"{currentPlayer} Trun";
             turn++;
             labelTrun.Text = $"turn {turn}";
             btnReset.Tag = "reset";
@@ -59,6 +60,7 @@ namespace xoApp
             turn++;
             labelTrun.Text = $"turn {turn}";
             CheckWinner();
+            lbWhoTrun.Text = $"{currentPlayer} Trun";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -141,6 +143,7 @@ namespace xoApp
             else if(turn >= 10)
             {
                 label1.Text = "Draw";
+                lbWhoTrun.Text = "";
             }
         }
 
@@ -152,14 +155,29 @@ namespace xoApp
                 {
                     ((Button)x).Enabled = false;
 
-                    if (x.Text == winner.ToString())
-                    {
-                        ((Button)x).BackColor = Color.Red;
-                    }
-                    else
+                    if (x.Text != winner.ToString())
                     {
                         ((Button)x).BackColor = default(Color);
                     }         
+                }
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            turn = 1;
+            labelTrun.Text = $"turn {turn}";
+            currentPlayer = Player.X;
+            lbWhoTrun.Text = $"{currentPlayer} Trun";
+            label1.Text = "";
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is Button && x.Tag != "reset")
+                {
+                    ((Button)x).Enabled = true;
+                    ((Button)x).Text = "";
+                    ((Button)x).BackColor = Color.White;
                 }
             }
         }
