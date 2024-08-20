@@ -148,7 +148,7 @@ namespace xoApp
         {
             foreach (Control x in this.Controls)
             {
-                if (x is Button && x.Tag != "reset")
+                if (x is Button && x.Tag.ToString() != "reset")
                 {
                     ((Button)x).Enabled = false;
 
