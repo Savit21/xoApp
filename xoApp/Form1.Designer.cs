@@ -46,7 +46,7 @@ namespace xoApp
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 51);
+            this.button1.Location = new System.Drawing.Point(12, 71);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 120);
             this.button1.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace xoApp
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(159, 51);
+            this.button2.Location = new System.Drawing.Point(159, 71);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 120);
             this.button2.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace xoApp
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(307, 51);
+            this.button3.Location = new System.Drawing.Point(307, 71);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 120);
             this.button3.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace xoApp
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(12, 197);
+            this.button4.Location = new System.Drawing.Point(12, 217);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 120);
             this.button4.TabIndex = 5;
@@ -86,7 +86,7 @@ namespace xoApp
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button5.Location = new System.Drawing.Point(159, 197);
+            this.button5.Location = new System.Drawing.Point(159, 217);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(120, 120);
             this.button5.TabIndex = 4;
@@ -96,7 +96,7 @@ namespace xoApp
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(307, 197);
+            this.button6.Location = new System.Drawing.Point(307, 217);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(120, 120);
             this.button6.TabIndex = 3;
@@ -106,7 +106,7 @@ namespace xoApp
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button7.Location = new System.Drawing.Point(12, 338);
+            this.button7.Location = new System.Drawing.Point(12, 358);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(120, 120);
             this.button7.TabIndex = 8;
@@ -116,7 +116,7 @@ namespace xoApp
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button8.Location = new System.Drawing.Point(159, 338);
+            this.button8.Location = new System.Drawing.Point(159, 358);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(120, 120);
             this.button8.TabIndex = 7;
@@ -126,7 +126,7 @@ namespace xoApp
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button9.Location = new System.Drawing.Point(307, 338);
+            this.button9.Location = new System.Drawing.Point(307, 358);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(120, 120);
             this.button9.TabIndex = 6;
@@ -136,7 +136,7 @@ namespace xoApp
             // labelTrun
             // 
             this.labelTrun.AutoSize = true;
-            this.labelTrun.Location = new System.Drawing.Point(156, 20);
+            this.labelTrun.Location = new System.Drawing.Point(156, 33);
             this.labelTrun.Name = "labelTrun";
             this.labelTrun.Size = new System.Drawing.Size(10, 13);
             this.labelTrun.TabIndex = 9;
@@ -144,7 +144,7 @@ namespace xoApp
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(441, 424);
+            this.btnReset.Location = new System.Drawing.Point(345, 22);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(82, 34);
             this.btnReset.TabIndex = 11;
@@ -155,7 +155,7 @@ namespace xoApp
             // lbWhoTrun
             // 
             this.lbWhoTrun.AutoSize = true;
-            this.lbWhoTrun.Location = new System.Drawing.Point(12, 20);
+            this.lbWhoTrun.Location = new System.Drawing.Point(12, 33);
             this.lbWhoTrun.Name = "lbWhoTrun";
             this.lbWhoTrun.Size = new System.Drawing.Size(35, 13);
             this.lbWhoTrun.TabIndex = 12;
@@ -165,7 +165,7 @@ namespace xoApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 471);
+            this.ClientSize = new System.Drawing.Size(439, 489);
             this.Controls.Add(this.lbWhoTrun);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.labelTrun);
