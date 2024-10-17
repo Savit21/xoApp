@@ -40,22 +40,21 @@ namespace xoApp
         private void buttonClick(object sender)
         {
             var button = (Button)sender;
-            if(currentPlayer == Player.X)
+            button.Text = currentPlayer.ToString();
+            button.Enabled = false;
+           
+            if (currentPlayer == Player.X)
             {                
-                button.Text = currentPlayer.ToString();
-                button.Enabled = false;
                 button.BackColor = Color.LightGreen;
-                button.Tag = "play";
                 currentPlayer = Player.O;
             }
             else
             {
-                button.Text = currentPlayer.ToString();
-                button.Enabled = false;
                 button.BackColor = Color.LightSalmon;
-                button.Tag = "play";
                 currentPlayer = Player.X;
             }
+
+            button.Tag = "play";
 
             turn++;
             labelTrun.Text = $"turn {turn}";
@@ -150,7 +149,8 @@ namespace xoApp
         {
             foreach (Control x in this.Controls)
             {
-                if (x is Button && x.Tag != "reset")
+                string btntag = x.Tag == null ? string.Empty : x.Tag.ToString(); 
+                if (x is Button && btntag != "reset")
                 {
                     ((Button)x).Enabled = false;
 
@@ -171,7 +171,8 @@ namespace xoApp
 
             foreach (Control x in this.Controls)
             {
-                if (x is Button && x.Tag != "reset")
+                string btntag = x.Tag == null ? string.Empty : x.Tag.ToString();
+                if (x is Button && btntag != "reset")
                 {
                     ((Button)x).Enabled = true;
                     ((Button)x).Text = "";
